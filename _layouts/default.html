@@ -1,21 +1,29 @@
 <!DOCTYPE html>
-<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+<html>
 
-  {%- include head.html -%}
+<head>
+  {% include head.html %}
+  <title>{{ page.title }}</title>
+</head>
 
-  <body>
+<body>
+  <div class="ods-layout container-xxl">
+    <main class="ods-main order-1">
 
-    {%- include header.html -%}
+      <div class="ods-intro pt-md-4 ps-lg-4">
+        <div class="d-md-flex align-items-center justify-content-between">
+          <h1 id="ods-title">{{ page.title }}</h1>
+        </div>
+        <p class="ods-lead">{{ page.description }}</p>
+      </div>
 
-    <main class="page-content" aria-label="Content">
-      <div class="wrapper">
+      <div class="ods-content ps-lg-4 mb-3">        
         {{ content }}
       </div>
     </main>
+  </div>
 
-    {%- include footer.html -%}
-
-  </body>
+  {% include scripts.html %}
+</body>
 
 </html>
-
