@@ -1,0 +1,7 @@
+# Build settings
+baseurl: /test-jekyll-theme
+relative_links:
+  enabled: true
+  collections: true
+remote_theme: Orange-OpenSource/ods-jekyll-theme
+
